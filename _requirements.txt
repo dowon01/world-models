@@ -1,0 +1,8 @@
+python=3.11
+gymnasium[box2d]
+matplotlib
+opencv-python
+torch
+lpips
+# Downloading: "https://download.pytorch.org/models/vgg16-397923af.pth" to /Users/dowon/.cache/torch/hub/checkpoints/vgg16-397923af.pth
+tqdm
