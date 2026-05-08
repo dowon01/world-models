@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import os
 
 def train_world_model():
-    device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"학습 시작 : {device} 사용")
 
     # 설정

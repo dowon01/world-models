@@ -5,7 +5,7 @@ from vq_vae import VQVAE
 from dataset import RacingDataset
 
 def generate_latent_dataset():
-    device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
 
     # 1. VQ-VAE 모델 로드

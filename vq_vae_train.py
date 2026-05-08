@@ -8,8 +8,7 @@ import numpy as np
 import lpips
 
 def train():
-    # 장치 설정 (MAC -> mps)
-    device = torch.device("mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"사용 중인 장치: {device}")
 
     # lpips 모델 초기화

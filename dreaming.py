@@ -6,7 +6,7 @@ from vq_vae import VQVAE
 import random
 
 def visualize_imagination():
-    device = torch.device("mps")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # 1. 모델 초기화
     vae = VQVAE(num_hiddens=128, num_residual_layers=2, num_residual_hiddens=32, num_embeddings=512, embedding_dim=64, commitment_cost = 0.5).to(device)

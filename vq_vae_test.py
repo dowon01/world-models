@@ -7,7 +7,7 @@ from vq_vae import VQVAE
 
 def visualize_saved_model(model_path, data_path, num_images=5):
     # 1. 장치 설정 
-    device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"사용 장치: {device}")
 
     # 2. 모델 초기화 (학습 때와 동일한 파라미터)
